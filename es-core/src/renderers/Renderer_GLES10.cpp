@@ -309,25 +309,93 @@ namespace Renderer
 				go2_input_battery_read(input, &batteryState);
 
 				int batteryIndex;
-				if (batteryState.level <= 5)
+				if (batteryState.level == 1)
 				{
 					batteryIndex = 0;
 				}
-				else if (batteryState.level <= 25)
+				else if (batteryState.level <= 5)
 				{
 					batteryIndex = 1;
 				}
-				else if (batteryState.level <= 50)
+				else if (batteryState.level <= 10)
 				{
 					batteryIndex = 2;
 				}
-				else if (batteryState.level <= 75)
+				else if (batteryState.level <= 15)
 				{
 					batteryIndex = 3;
 				}
-				else
+				else if (batteryState.level <= 20)
 				{
 					batteryIndex = 4;
+				}
+				else if (batteryState.level <= 25)
+				{
+					batteryIndex = 5;
+				}
+				else if (batteryState.level <= 30)
+				{
+					batteryIndex = 6;
+				}
+				else if (batteryState.level <= 35)
+				{
+					batteryIndex = 7;
+				}
+				else if (batteryState.level <= 40)
+				{
+					batteryIndex = 8;
+				}
+				else if (batteryState.level <= 45)
+				{
+					batteryIndex = 9;
+				}
+				else if (batteryState.level <= 50)
+				{
+					batteryIndex = 10;
+				}
+				else if (batteryState.level <= 55)
+				{
+					batteryIndex = 11;
+				}
+				else if (batteryState.level <= 60)
+				{
+					batteryIndex = 12;
+				}
+				else if (batteryState.level <= 65)
+				{
+					batteryIndex = 13;
+				}
+				else if (batteryState.level <= 70)
+				{
+					batteryIndex = 14;
+				}
+				else if (batteryState.level <= 75)
+				{
+					batteryIndex = 15;
+				}
+				else if (batteryState.level <= 80)
+				{
+					batteryIndex = 16;
+				}
+				else if (batteryState.level <= 85)
+				{
+					batteryIndex = 17;
+				}
+				else if (batteryState.level <= 90)
+				{
+					batteryIndex = 18;
+				}
+				else if (batteryState.level <= 95)
+				{
+					batteryIndex = 19;
+				}
+				else if (batteryState.level == 100)
+				{
+					batteryIndex = 20;
+				}				
+				else
+				{
+					batteryIndex = 20;
 				}
 				
 				src += (batteryIndex * 16 * src_stride);
@@ -357,25 +425,53 @@ namespace Renderer
 				{
 					volumeIndex = 0;
 				}
-				else if (volume <= 20)
+				else if (volume <= 5)
 				{
 					volumeIndex = 1;
 				}
-				else if (volume <= 40)
+				else if (volume <= 15)
 				{
 					volumeIndex = 2;
 				}
-				else if (volume <= 60)
+				else if (volume <= 25)
 				{
 					volumeIndex = 3;
 				}
-				else if (volume <= 80)
+				else if (volume <= 35)
 				{
 					volumeIndex = 4;
 				}
-				else
+				else if (volume <= 45)
 				{
 					volumeIndex = 5;
+				}
+				else if (volume <= 55)
+				{
+					volumeIndex = 6;
+				}
+				else if (volume <= 65)
+				{
+					volumeIndex = 7;
+				}
+				else if (volume <= 75)
+				{
+					volumeIndex = 8;
+				}
+				else if (volume <= 85)
+				{
+					volumeIndex = 9;
+				}
+				else if (volume <= 95)
+				{
+					volumeIndex = 9;
+				}
+				else if (volume = 100)
+				{
+					volumeIndex = 10;
+				}
+				else
+				{
+					volumeIndex = 10;
 				}
 				
 				src += (volumeIndex * 16 * src_stride);
